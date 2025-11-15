@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 import random
 
 class HorseColicPredictor:
-    # 一个封装了逻辑回归实验全过程的类。
-    # 遵循PDF文档要求，包括均值填充预处理，并简化了终端输出。
     def __init__(self):
         # 初始化，用于存储训练集的特征均值
         self.training_means = None
@@ -63,7 +61,7 @@ class HorseColicPredictor:
         return feature_set, label_set
 
     def preprocess_mean_fill(self, dataset, is_training=True):
-        # 预处理：使用训练集的均值填充缺失值(0)
+        # 使用训练集的均值填充缺失值(0)
         feature_matrix = np.array(dataset)
         if is_training:
             num_features = feature_matrix.shape[1]
